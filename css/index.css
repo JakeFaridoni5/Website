@@ -20,21 +20,26 @@ body {
     animation: fadeIn 3s forwards;
 }
 
-@keyframes fadeIn {
-    To {
-        opacity: 1;
-    }
-}
-
 .links {
     position: relative;
 }
 
-.links .search {
+.search {
     height: 50px;
     width: 50px;
     font-size: 18px;
     position: absolute;
     right: 150px;
+    top: 25px;
+    transition: width 1s ease;
+}
+
+.loading {
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    position: absolute;
+    right: 150px;
+    top: 50px;
     transition: width 1s ease;
 }

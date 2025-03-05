@@ -36,7 +36,7 @@ body {
 
 .loading {
     height: 50px;
-    width: 50px;
+    width: 100px;
     font-size: 18px;
     position: absolute;
     right: 150px;

@@ -18,3 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+.loading-text {
+    font-size: 50px;
+}

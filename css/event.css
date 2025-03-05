@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ababab;
+}
+
+.box {
+    background-color: #BB33BB;
+    color: white;
+    height: 50px;
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+#element1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#element2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#element3 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#element4 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+#element5 {
+    animation: spin .5s linear infinite;
+    animation-play-state: paused;
+}

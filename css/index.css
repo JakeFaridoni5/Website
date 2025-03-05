@@ -31,7 +31,7 @@ body {
     position: absolute;
     right: 150px;
     top: 25px;
-    transition: width 1s ease;
+    animation: fadeIn 3s forwards;
 }
 
 .loading {
@@ -41,5 +41,11 @@ body {
     position: absolute;
     right: 150px;
     top: 50px;
-    transition: width 1s ease;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    To {
+        opacity: 1;
+    }
 }

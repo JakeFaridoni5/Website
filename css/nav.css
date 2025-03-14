@@ -48,15 +48,17 @@ body {
 
 .nav.active {
     background-color: rgb(255,255,255);
+    padding: 10px 0;
+    border-bottom: 3px solid black;
 }
 
 .nav.active a {
     color: black;
 }
 
-.nav.active .container {
-    padding: 10px 0;
-    
+.nav a.current, .nav a:hover {
+    color: #c0392b;
+    font-weight: bold;
 }
 
 .hero {

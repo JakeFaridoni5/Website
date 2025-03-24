@@ -54,7 +54,6 @@ function createInsect() {
     insect.addEventListener('click', () => {
         score = score + 1;
         if (score >= 10 && score < 15) {
-            console.log('AH')
             message.classList.add('visible')
          }
          else {

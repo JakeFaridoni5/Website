@@ -59,6 +59,9 @@ function createInsect() {
         insect.style.left = `${x}px`
         insect.style.transform = `rotate(${Math.random * 360}deg)`
         createInsect()
+        createInsect()
+        createInsect()
+        createInsect()
 
     })
     game_container.appendChild(insect)

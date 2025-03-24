@@ -51,6 +51,10 @@ function createInsect() {
     const {x, y} = getRandomLocation()
     insect.style.top = `${y}px`
     insect.style.left = `${x}px`
+    if (score >= 15) {
+        message.style.opacity = 1
+        message.style.z-index = 1
+    }
     insect.addEventListener('click', () => {
         score = score + 1;
         scoreEl.innerHTML = `Score: ${score}`

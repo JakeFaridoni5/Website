@@ -57,7 +57,6 @@ function createInsect() {
         const {x, y} = getRandomLocation()
         insect.style.top = `${y}px`
         insect.style.left = `${x}px`
-        insect.style.transform = `rotate(${Math.random * 360}deg)`
         createInsect()
     })
     game_container.appendChild(insect)

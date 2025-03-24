@@ -58,7 +58,7 @@ function createInsect() {
             message.classList.add('visible')
          }
          else {
-            
+            message.classList.remove('visible')
          }
         scoreEl.innerHTML = `Score: ${score}`
         const {x, y} = getRandomLocation()

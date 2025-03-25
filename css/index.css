@@ -3,6 +3,7 @@
 }
 
 body {
+    font-size: 18;
     display: flex;
     align-items: center; /* vertically center */
     justify-content: center; /* horizontally center */

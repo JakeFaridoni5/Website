@@ -10,6 +10,55 @@ body {
     margin: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgb(22,22,22);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: rgb(255,255,255);
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.nav.active {
+    background-color: rgb(255,255,255);
+    padding: 10px 0;
+    border-bottom: 3px solid black;
+}
+
+.nav.active a {
+    color: black;
+}
+
+.nav a.current, .nav a:hover {
+    color: #c0392b;
+    font-weight: bold;
+}
+
 .text.active {
     opacity: 0;
 }
@@ -17,35 +66,4 @@ body {
 .text {
     opacity: 0;
     animation: fadeIn 3s forwards;
-}
-
-.links {
-    position: relative;
-    animation: fadeIn 3s forwards;
-}
-
-.search {
-    height: 50px;
-    width: 50px;
-    font-size: 18px;
-    position: absolute;
-    right: 150px;
-    top: 25px;
-    animation: fadeIn 3s forwards;
-}
-
-.loading {
-    height: 50px;
-    width: 100px;
-    font-size: 18px;
-    position: absolute;
-    right: 150px;
-    top: 50px;
-    animation: fadeIn 3s forwards;
-}
-
-@keyframes fadeIn {
-    To {
-        opacity: 1;
-    }
 }

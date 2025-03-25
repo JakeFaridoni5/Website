@@ -55,7 +55,8 @@ body {
 }
 
 .nav a.current, .nav a:hover {
-    font-size: 16;
+    font-size: 20;
+    color: rgb(0, 0, 275);
     transition: 1s ease;
 }
 

@@ -3,7 +3,7 @@ const backImg = document.querySelector('.hero')
 
 document.addEventListener('scroll', () => {
     backImg.style.filter = `blur(${window.scrollY * 0.05}px)`
-    if (textBox.style.top < `-205px`)
+    if (parseInt(textBox.style.top) > -205)
     {
         textBox.style.top = `-${window.scrollY}px`
     }

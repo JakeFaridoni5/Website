@@ -84,7 +84,7 @@ body {
     position: relative;
     background-image: url('../images/mountain.jpg');
     background-repeat: no-repeat;
-    background-size: cover:
+    background-size: contain:
     background-position: bottom center;
     height: 100vh;
     display: flex;

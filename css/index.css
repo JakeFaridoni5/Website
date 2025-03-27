@@ -29,6 +29,11 @@ body {
     transition: ease-out 1s;
 }
 
+.nav.active {
+    height: 50px;
+    transition: ease 1s;
+}
+
 .nav .container {
     display: flex;
     justify-content: space-between;
@@ -148,18 +153,22 @@ body {
 
 .nav.active .logoBox {
     margin-left: -300px;
-    margin-top: -19px;
+    margin-top: -18px;
     transition: ease 1s;
 }
 
 .nav.active .linkBoxRight {
     margin-right: -300px;
-    margin-top: -19px;
+    margin-top: -18px;
     transition: ease 1s;
 }
 
-.nav.active {
-    height: 50px;
+.nav.active .linkBox {
+    margin-top: -18px;
+    transition: ease 1s;
+}
+.nav.active .linkBoxLeft {
+    margin-top: -18px;
     transition: ease 1s;
 }
 

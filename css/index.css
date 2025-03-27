@@ -172,9 +172,23 @@ body {
     transition: ease 1s;
 }
 
+
+
 .textBox .image img {
     width: 50%;
     height: 50%;
     margin-left: -900px;
+    border-radius: 15px;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.textBox .text {
+    width: 800px;
+    height: 470px;
+    margin-top: -500px;
+    margin-left: 975px;
+    background-color: rgb(33, 33, 33);
+    border: 1px solid rgb(75, 75, 75);
+    padding: 15px;
     border-radius: 15px;
 }

@@ -105,12 +105,14 @@ body {
     background-color: rgb(50, 50, 50);
     border-radius: 10px;
     transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .linkBoxLeft {
     background-color: rgb(50, 50, 50);
     border-radius: 10px 0px 0px 10px;
     transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .linkBoxLeft:hover {
@@ -121,6 +123,7 @@ body {
 .linkBox {
     background-color: rgb(50, 50, 50);
     transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .linkBox:hover {
@@ -132,6 +135,7 @@ body {
     background-color: rgb(50, 50, 50);
     border-radius: 0px 10px 10px 0px;
     transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
 }
 
 .linkBoxRight:hover {

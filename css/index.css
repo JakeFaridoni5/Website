@@ -36,12 +36,13 @@ body {
 }
 
 .nav .logo {
+    color: rgb(106, 148, 171);
     font-size: 35px;
 }
 
 .nav .logo:hover {
     font-size: 40px;
-    color: rgb(90, 235, 125);
+    color: rgb(255, 255, 255);
     transition: 0.5s ease;
 }
 
@@ -53,7 +54,7 @@ body {
 }
 
 .nav a {
-    color: rgb(255,255,255);
+    color: rgb(106, 148, 171);
     padding: 7px 15px;
     text-decoration: none;
     transition: 0.25s ease-out;
@@ -65,7 +66,7 @@ body {
 
 .nav a.current, .nav .link:hover {
     font-size: 25px;
-    color: rgb(90, 235, 125);
+    color: rgb(255, 255, 255);
     transition: 0.5s ease;
 }
 

@@ -8,8 +8,8 @@ body {
     overflow-x: hidden;
     font-size: 12px;
     color: rgb(22,22,22);
-    padding-bottom: 50px;
-    background-color: rgb(22, 22, 22);
+    padding-bottom: 25px;
+    background-color: rgba(25, 25, 25);
 }
 
 .container {
@@ -98,10 +98,10 @@ body {
     font-size: 20px;
     position: relative;
     margin: auto;
-    text-align: center;
-    background-color: rgb(22, 22, 22);
+    text-align: left;
+    background-color: rgb(25, 25, 25);
     color: white;
-    padding: 50px 25px;
+    padding: 25px 15px;
     width: 99vw;
     height: 100vh;
     top: 0px;
@@ -152,31 +152,27 @@ body {
 }
 
 .nav.active .logoBox {
-    margin-left: -300px;
     margin-top: -18px;
-    transition: ease 1s;
+    transition: ease 0.25s;
 }
 
 .nav.active .linkBoxRight {
-    margin-right: -300px;
     margin-top: -18px;
-    transition: ease 1s;
+    transition: ease 0.25s;
 }
 
 .nav.active .linkBox {
     margin-top: -18px;
-    transition: ease 1s;
+    transition: ease 0.25s;
 }
 .nav.active .linkBoxLeft {
     margin-top: -18px;
-    transition: ease 1s;
+    transition: ease 0.25s;
 }
 
 
 
 .textBox .image img {
-    display: flex;
-    flex-direction: column;
     width: 50%;
     height: 50%;
     border-radius: 15px;
@@ -187,12 +183,9 @@ body {
 
 
 .textBox .text {
-    display: flex;
     flex-direction: column;
     text-align: left;
     width: 800px;
-    margin-top: -1700px;
-    margin-left: 975px;
     background-color: rgb(33, 33, 33);
     border: 1px solid rgb(75, 75, 75);
     padding: 15px;

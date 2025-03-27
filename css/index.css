@@ -25,8 +25,8 @@ body {
     left: 0;
     right: 0;
     z-index: 101;
-    transition: ease-out 0.25s;
     border-bottom: 2px solid rgb(75, 75, 75);
+    transition: ease-out 1s;
 }
 
 .nav .container {
@@ -148,10 +148,23 @@ body {
 
 .nav.active .logoBox {
     margin-left: -300px;
+    margin-top: -19px;
     transition: ease 1s;
 }
 
 .nav.active .linkBoxRight {
     margin-right: -300px;
     transition: ease 1s;
+}
+
+.nav.active {
+    height: 50px;
+    transition: ease 1s;
+}
+
+.textBox .image img {
+    width: 50%;
+    height: 50%;
+    margin-left: -650px;
+    border-radius: 15px;
 }

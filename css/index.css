@@ -177,10 +177,19 @@ body {
 .textBox .image img {
     width: 50%;
     height: 50%;
-    margin-left: -900px;
     border-radius: 15px;
     border: 1px solid rgb(75, 75, 75);
 }
+
+.textBox .image .img1 {
+    margin-left: -900px;
+}
+
+.textBox .image .img2 {
+    margin-left: -900px;
+}
+
+
 
 .textBox .text {
     text-align: left;

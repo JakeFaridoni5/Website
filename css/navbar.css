@@ -1,0 +1,124 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgb(22,22,22);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    border-bottom: 2px solid rgb(75, 75, 75);
+    transition: ease-out 1s;
+}
+
+.nav.active {
+    height: 50px;
+    transition: ease 1s;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav .logo {
+    color: rgb(106, 148, 171);
+    font-size: 35px;
+}
+
+.nav .logo:hover {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: rgb(106, 148, 171);
+    padding: 7px 15px;
+    text-decoration: none;
+    transition: 0.25s ease-out;
+}
+
+.nav .link {
+    font-size: 20px;
+}
+
+.nav a.current, .nav .link:hover {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+.logoBox {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.linkBoxLeft {
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px 0px 0px 10px;
+    transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.linkBoxLeft:hover {
+    border-radius: 10px;
+    transition: ease 0.5s;
+}
+
+.linkBox {
+    background-color: rgb(50, 50, 50);
+    transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.linkBox:hover {
+    border-radius: 10px;
+    transition: ease 0.5s;
+}
+
+.linkBoxRight {
+    background-color: rgb(50, 50, 50);
+    border-radius: 0px 10px 10px 0px;
+    transition: ease-out 1s;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.linkBoxRight:hover {
+    border-radius: 10px;
+    transition: ease 0.5s
+}
+
+.nav.active .logoBox {
+    margin-top: -18px;
+    transition: ease 0.25s;
+}
+
+.nav.active .linkBoxRight {
+    margin-top: -18px;
+    transition: ease 0.25s;
+}
+
+.nav.active .linkBox {
+    margin-top: -18px;
+    transition: ease 0.25s;
+}
+.nav.active .linkBoxLeft {
+    margin-top: -18px;
+    transition: ease 0.25s;
+}

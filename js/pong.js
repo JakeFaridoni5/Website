@@ -88,3 +88,7 @@ function moveBall(){
             paddle.style.left = `${paddleXPosition}px`
         }
     }
+
+    function collisionDetect(){
+        
+    }

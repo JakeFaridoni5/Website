@@ -10,12 +10,13 @@ let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = -1
 const paddleWidth = 12 * ballRadius
 let paddleXPosition = windowWidth/2 - paddleWidth/2
-let paddleSpeed = 5 * ballSpeed
+let paddleSpeed = 1.5 * ballSpeed
 let paddleDirection = 0
 
 
 setInterval(moveBall, 10)
-setInterval()
+setInterval(movePaddleRight, 10)
+setInterval(movePaddleLeft, 10)
 
 createBall()
 createPaddle()

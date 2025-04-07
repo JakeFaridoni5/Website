@@ -11,9 +11,11 @@ let ballYDirection = -1
 const paddleWidth = 12 * ballRadius
 let paddleXPosition = windowWidth/2 - paddleWidth/2
 let paddleSpeed = 5 * ballSpeed
+let paddleDirection = 0
 
 
 setInterval(moveBall, 10)
+setInterval()
 
 createBall()
 createPaddle()
@@ -54,19 +56,34 @@ function moveBall(){
 
     document.addEventListener('keydown', (event) => {
         if (event.key == 'ArrowRight'){
-            movePaddleRight()
+            paddleDirection = 1
         }
         if (event.key == 'ArrowLeft'){
-            movePaddleLeft()
+            paddleDirection = -1
+        }
+    })
+
+    document.addEventListener('keyup', (event) => {
+        if (event.key == 'ArrowRight'){
+            paddleDirection = 0
+        }
+        if (event.key == 'ArrowLeft'){
+            paddleDirection = 0
         }
     })
 
     function movePaddleRight(){
-        paddleXPosition = paddleXPosition + paddleSpeed
-        paddle.style.left = `${paddleXPosition}px`
+        if (paddleDirection == 1)
+        {
+            paddleXPosition = paddleXPosition + paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
     }
 
     function movePaddleLeft(){
-        paddleXPosition = paddleXPosition - paddleSpeed
-        paddle.style.left = `${paddleXPosition}px`
+        if (paddleDirection == -1)
+        {
+            paddleXPosition = paddleXPosition - paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
     }

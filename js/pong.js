@@ -62,28 +62,11 @@ function moveBall(){
     })
 
     function movePaddleRight(){
-        if (paddleXPosition - paddleWidth/2 >= windowWidth)
-        {
-            paddleXposition = paddleXPosition
-            paddle.style.left = `${paddleXPosition}px`
-        }
-        else if (paddleXPosition + paddleWidth/2 != windowWidth)
-        {
-            paddleXPosition = paddleXPosition + paddleSpeed
-            paddle.style.left = `${paddleXPosition}px`
-        }
+        paddleXPosition = paddleXPosition + paddleSpeed
+        paddle.style.left = `${paddleXPosition}px`
     }
 
     function movePaddleLeft(){
-        if (paddleXPosition - paddleWidth/2 <= 0)
-        {
-            paddleXposition = paddleXPosition
-            paddle.style.left = `${paddleXPosition}px`
-            
-        }
-        else if (paddleXPosition - paddleWidth/2 != 0)
-        {
-            paddleXPosition = paddleXPosition - paddleSpeed
-            paddle.style.left = `${paddleXPosition}px`
-        }
+        paddleXPosition = paddleXPosition - paddleSpeed
+        paddle.style.left = `${paddleXPosition}px`
     }

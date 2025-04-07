@@ -82,7 +82,7 @@ function moveBall(){
     }
 
     function movePaddleLeft(){
-        if (paddleDirection == -1)
+        if (paddleDirection == -1 && paddleWidth >= 0)
         {
             paddleXPosition = paddleXPosition - paddleSpeed
             paddle.style.left = `${paddleXPosition}px`

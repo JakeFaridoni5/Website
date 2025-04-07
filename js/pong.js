@@ -32,7 +32,7 @@ function createBall(){
 function createPaddle(){
     document.body.appendChild(paddle)
     paddle.style.height = "50px"
-    paddle.style.width = `${12 * ballRadius}px`
+    paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"
     paddle.style.position = "absolute"
     paddle.style.bottom = "50px"

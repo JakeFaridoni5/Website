@@ -8,6 +8,7 @@ let ballSpeed = 5;
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = -1
+const paddleWidth = 12 * ballRadius
 let paddleXPosition = windowWidth/2 - 6 * ballRadius
 let paddleSpeed = 5 * ballSpeed
 
@@ -36,7 +37,6 @@ function createPaddle(){
     paddle.style.position = "absolute"
     paddle.style.bottom = "50px"
     paddle.style.left = `${paddleXPosition}px`
-    paddle.style.transition = "ease 0.05s"
 }
 
 function moveBall(){

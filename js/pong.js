@@ -65,11 +65,17 @@ function moveBall(){
     })
 
     function movePaddleRight(){
-        paddleXPosition = paddleXPosition + paddleSpeed
-        paddle.style.left = `${paddleXPosition}px`
+        if (paddleXPosition + paddleWidth/2 != windowWidth)
+        {
+            paddleXPosition = paddleXPosition + paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
     }
 
     function movePaddleLeft(){
-        paddleXPosition = paddleXPosition - paddleSpeed
-        paddle.style.left = `${paddleXPosition}px`
+        if (paddleXPosition - paddleWidth/2 != 0)
+        {
+            paddleXPosition = paddleXPosition - paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
     }

@@ -56,16 +56,18 @@ function moveBall(){
         if (event.key == 'ArrowRight'){
             movePaddleRight()
         }
-    })
-
-    document.addEventListener('keydown', (event) => {
         if (event.key == 'ArrowLeft'){
             movePaddleLeft()
         }
     })
 
     function movePaddleRight(){
-        if (paddleXPosition + paddleWidth/2 != windowWidth)
+        if (paddleXPosition - paddleWidth/2 >= windowWidth)
+        {
+            paddleXposition = paddleXPosition
+            paddle.style.left = `${paddleXPosition}px`
+        }
+        else if (paddleXPosition + paddleWidth/2 != windowWidth)
         {
             paddleXPosition = paddleXPosition + paddleSpeed
             paddle.style.left = `${paddleXPosition}px`
@@ -73,7 +75,13 @@ function moveBall(){
     }
 
     function movePaddleLeft(){
-        if (paddleXPosition - paddleWidth/2 != 0)
+        if (paddleXPosition - paddleWidth/2 <= 0)
+        {
+            paddleXposition = paddleXPosition
+            paddle.style.left = `${paddleXPosition}px`
+            
+        }
+        else if (paddleXPosition - paddleWidth/2 != 0)
         {
             paddleXPosition = paddleXPosition - paddleSpeed
             paddle.style.left = `${paddleXPosition}px`

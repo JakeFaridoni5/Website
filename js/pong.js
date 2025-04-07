@@ -9,7 +9,7 @@ let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = -1
 const paddleWidth = 12 * ballRadius
-let paddleXPosition = windowWidth/2 - 6 * ballRadius
+let paddleXPosition = windowWidth/2 - paddleWidth/2
 let paddleSpeed = 5 * ballSpeed
 
 
@@ -31,7 +31,7 @@ function createBall(){
 
 function createPaddle(){
     document.body.appendChild(paddle)
-    paddle.style.height = "50px"
+    paddle.style.height = "35px"
     paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"
     paddle.style.position = "absolute"

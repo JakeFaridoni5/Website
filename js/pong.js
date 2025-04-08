@@ -62,7 +62,7 @@ function moveBall(){
     let ballBottom = ballYPosition + 2 * ballRadius
     let ballLeft = ballXPosition
     let paddleTop = paddleYPosition
-    let paddleBottom = paddleYPosition + paddleWidth
+    let paddleBottom = paddleYPosition + paddleHeight
     if(
         (ballBottom >= paddleTop) &&
         (ballTop <= paddleBottom) &&

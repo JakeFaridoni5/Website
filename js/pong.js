@@ -59,6 +59,11 @@ function moveBall(){
     if (ballYPosition < 0 || ballYPosition > (windowHeight - 2 * ballRadius)){
         ballYDirection = ballYDirection * -1
     }
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let paddleTop = paddleYPosition
+    let paddleBottom = paddleYPosition + paddleWidth
 }
 
     document.addEventListener('keydown', (event) => {

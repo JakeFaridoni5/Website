@@ -64,6 +64,13 @@ function moveBall(){
     // let ballLeft = ballXPosition
     let paddleTop = paddleYPosition
     let paddleBottom = paddleYPosition + paddleWidth
+    if(
+        (ballBottom >= paddleTop) &&
+        (ballTop <= paddleBottom) &&
+        (ballYDirection == -1)
+    ) {
+        ballYDirection = ballYDirection * -1
+    }
 }
 
     document.addEventListener('keydown', (event) => {
@@ -97,14 +104,5 @@ function moveBall(){
         {
             paddleXPosition = paddleXPosition - paddleSpeed
             paddle.style.left = `${paddleXPosition}px`
-        }
-    }
-
-    function collisionDetect(){
-        if (ballYPosition + ballRadius <= paddleYPosition + 5 && ballYPosition + ballRadius >= paddleYPosition - 5)
-        {
-            ballYDirection = ballYDirection * -1
-            ballYPosition = ballYPosition + ballSpeed * ballYDirection
-            ball.style.top = `${ballYPosition}px`
         }
     }

@@ -58,17 +58,18 @@ function moveBall(){
     if (ballYPosition < 0 || ballYPosition > (windowHeight - 2 * ballRadius)){
         ballYDirection = ballYDirection * -1
     }
-    let ballTop = ballYPosition
-    let ballBottom = ballYPosition + 2 * ballRadius
+    // let ballTop = ballYPosition
+    // let ballBottom = ballYPosition + 2 * ballRadius
     // let ballLeft = ballXPosition
-    let paddleTop = paddleYPosition
-    let paddleBottom = paddleYPosition + paddleWidth
-    if(
-        (ballBottom <= paddleTop)
-        // (ballYDirection == -1)
-    ) {
-        ballYDirection = ballYDirection * -1
-    }
+    // let paddleTop = paddleYPosition
+    // let paddleBottom = paddleYPosition + paddleWidth
+    // if(
+    //     (ballBottom <= paddleTop) &&
+    //     (ballYDirection == -1)
+    // ) {
+    //     ballYDirection = ballYDirection * -1
+    // }
+    
 }
 
     document.addEventListener('keydown', (event) => {

@@ -43,7 +43,7 @@ function createPaddle(){
     paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"
     paddle.style.position = "absolute"
-    paddle.style.bottom = `${paddleYPosition}px`
+    paddle.style.top = `${paddleYPosition}px`
     paddle.style.left = `${paddleXPosition}px`
 }
 

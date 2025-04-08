@@ -69,7 +69,7 @@ function moveBall(){
     if(
         (ballBottom >= paddleTop) &&
         (ballTop <= paddleBottom - 5) &&
-        (ballLeft <= paddleLeft || ballRight >= paddleRight) &&
+        (ballLeft >= paddleLeft && ballRight <= paddleRight) &&
         (ballYDirection == -1)
     ) {
         ballYDirection = ballYDirection * -1

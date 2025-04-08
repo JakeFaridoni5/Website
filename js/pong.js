@@ -64,7 +64,8 @@ function moveBall(){
     let paddleTop = paddleYPosition
     let paddleBottom = paddleYPosition + paddleWidth
     if(
-        (ballBottom <= paddleTop) &&
+        (ballBottom >= paddleTop) &&
+        (ballTop <= paddleBottom) &&
         (ballYDirection == -1)
     ) {
         ballYDirection = ballYDirection * -1

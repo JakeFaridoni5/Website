@@ -1,15 +1,20 @@
 const ball = document.createElement('div')
 const paddle = document.createElement('div')
 const ballRadius = 30
+//
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
+//
 let ballXPosition = windowWidth/2 -ballRadius
 let ballSpeed = 5;
 let ballXDirection = 1
 let ballYPosition = windowHeight/2 - ballRadius
 let ballYDirection = -1
-const paddleWidth = 12 * ballRadius
+//
+let paddleWidth = 12 * ballRadius
+let paddleHeight = 35
 let paddleXPosition = windowWidth/2 - paddleWidth/2
+let paddleYPosition = 50
 let paddleSpeed = 1.5 * ballSpeed
 let paddleDirection = 0
 
@@ -17,6 +22,7 @@ let paddleDirection = 0
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
+setInterval(collisionDetect, 1)
 
 createBall()
 createPaddle()
@@ -34,11 +40,11 @@ function createBall(){
 
 function createPaddle(){
     document.body.appendChild(paddle)
-    paddle.style.height = "35px"
+    paddle.style.height = `${paddleHeight}px`
     paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"
     paddle.style.position = "absolute"
-    paddle.style.bottom = "50px"
+    paddle.style.bottom = `${paddleYPosition}px`
     paddle.style.left = `${paddleXPosition}px`
 }
 
@@ -90,5 +96,10 @@ function moveBall(){
     }
 
     function collisionDetect(){
-        
+        if (ballYPosition + ballRadius <= paddleYPosition + 5 && ballYPosition + ballRadius >= paddleYPosition - 5)
+        {
+            ballYDirection = ballYDirection * -1
+            ballYPosition = ballYPosition + ballSpeed * ballYDirection
+            ball.style.top = `${ballYPosition}px`
+        }
     }

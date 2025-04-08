@@ -14,7 +14,7 @@ let ballYDirection = -1
 let paddleWidth = 12 * ballRadius
 let paddleHeight = 35
 let paddleXPosition = windowWidth/2 - paddleWidth/2
-let paddleYPosition = 50
+let paddleYPosition = 55
 let paddleSpeed = 1.5 * ballSpeed
 let paddleDirection = 0
 
@@ -64,7 +64,7 @@ function moveBall(){
     let paddleTop = paddleYPosition
     let paddleBottom = paddleYPosition + paddleHeight
     if(
-        (ballBottom >= paddleTop) &&
+        (ballBottom >= paddleTop -5) &&
         (ballTop <= paddleBottom) &&
         (ballYDirection == -1)
     ) {

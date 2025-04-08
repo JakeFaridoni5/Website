@@ -22,7 +22,6 @@ let paddleDirection = 0
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
-setInterval(collisionDetect, 1)
 
 createBall()
 createPaddle()
@@ -65,8 +64,8 @@ function moveBall(){
     let paddleTop = paddleYPosition
     let paddleBottom = paddleYPosition + paddleWidth
     if(
-        (ballBottom >= paddleTop) &&
-        (ballTop <= paddleBottom) &&
+        (ballBottom <= paddleTop) &&
+        (ballTop >= paddleBottom) &&
         (ballYDirection == -1)
     ) {
         ballYDirection = ballYDirection * -1

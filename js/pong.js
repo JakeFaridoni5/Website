@@ -1,6 +1,7 @@
 const ball = document.createElement('div')
 const paddle = document.createElement('div')
 const ballRadius = 30
+const score = document.createElement('div')
 //
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
@@ -49,8 +50,6 @@ function createPaddle(){
 }
 
 function createScore() {
-    const score = document.createElement('div');
-    score.id = 'score';
     score.innerHTML = '0';
     document.body.appendChild(score);
     score.style.position = 'absolute';
@@ -91,19 +90,10 @@ function moveBall(){
         ballYDirection = ballYDirection * -1;
         increaseScore();
     }
-    if (ballTop >= windowHeight) {
-        ballYDirection = ballYDirection * -1;
-        ballXPosition = windowWidth/2 - ballRadius
-        ballYPosition = windowHeight/2 - ballRadius
-        ball.style.left = `${ballXPosition}px`
-        ball.style.top = `${ballYPosition}px`
-        alert("Game Over")
-        const score = document.getElementById('score');
-        score.innerHTML = '0';
+    
 }
 
 function increaseScore() {
-    const score = document.getElementById('score');
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
 }
 

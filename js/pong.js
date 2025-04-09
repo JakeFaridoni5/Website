@@ -104,6 +104,13 @@ function moveBall() {
         increaseScore();
     }
     if (ballYPosition < 0) {
+        difficultyIncreased = false;
+        ballSpeed = ballSpeed / 1.5;
+        paddleSpeed = paddleSpeed / 1.5;
+        ball.style.transition = "background-color 1.5s ease";
+        ball.style.backgroundColor = "blue";
+        score.style.transition = "color 1.5s ease";
+        score.style.color = "white";
         score.innerHTML = '0';
         ballXPosition = windowWidth / 2 - ballRadius;
         ballYPosition = windowHeight / 2 - ballRadius;

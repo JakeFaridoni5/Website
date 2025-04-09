@@ -33,6 +33,7 @@ function styleGame() {
     ball.style.border = "2px solid white";
     paddle.style.borderRadius = "5px";
     score.style.color = "white";
+    document.body.style.overflow = "hidden";
 }
 
 function createBall() {
@@ -48,7 +49,8 @@ function createBall() {
 
 function createPaddle() {
     document.body.appendChild(paddle)
-    paddle.style.backgroundColor = "White"
+    paddle.style.border = "2px solid white";
+    paddle.style.backgroundColor = "white";
     paddle.style.height = `${paddleHeight}px`
     paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"

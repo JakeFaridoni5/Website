@@ -27,6 +27,10 @@ setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
 
+function styleGame() {
+    
+}
+
 function createBall() {
     document.body.appendChild(ball)
     ball.style.height = `${2 * ballRadius}px`

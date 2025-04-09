@@ -89,10 +89,14 @@ function moveBall(){
         ballYDirection === -1
     ) {
         ballYDirection = ballYDirection * -1;
+        increaseScore();
     }
 }
 
-
+function increaseScore() {
+    const score = document.getElementById('score');
+    score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
+}
 
     document.addEventListener('keydown', (event) => {
         if (event.key == 'ArrowRight'){

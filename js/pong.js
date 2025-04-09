@@ -132,8 +132,10 @@ function movePaddleLeft() {
     }
 }
 
+let difficultyIncreased = false;
+
 function dif1() {
-    ballSpeed =  ballSpeed * 2;
+    ballSpeed = ballSpeed * 2;
     paddleSpeed = paddleSpeed * 2;
 
     ball.style.transition = "background-color 0.5s ease";
@@ -144,8 +146,9 @@ function dif1() {
 }
 
 function changeDif() {
-    if (parseInt(score.innerHTML) == 5) {
+    if (parseInt(score.innerHTML) == 5 && !difficultyIncreased) {
         dif1();
+        difficultyIncreased = true;
     }
 }
 

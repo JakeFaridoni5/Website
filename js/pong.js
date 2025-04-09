@@ -196,7 +196,8 @@ function dif3() {
     ballSpeed = ballSpeed * 1.5;
     paddleSpeed = paddleSpeed * 1.5;
 
-    paddle.style.opacity = "0.1";
+    paddle.style.transition = "opacity 1.5s ease";
+    paddle.style.opacity = "0.4";
 
     ball.style.transition = "background-color 1.5s ease";
     ball.style.backgroundColor = "orange";
@@ -230,15 +231,15 @@ function dif5() {
 }
 
 function changeDif() {
-    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
+    if (parseInt(score.innerHTML) == 5 && !difficultyIncreased) {
         dif1();
         difficultyIncreased = true;
     }
-    if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {
+    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased2) {
         dif2();
         difficultyIncreased2 = true;
     }
-    if (parseInt(score.innerHTML) == 30 && !difficultyIncreased3) {
+    if (parseInt(score.innerHTML) == 20 && !difficultyIncreased3) {
         dif3();
         difficultyIncreased3 = true;
     }

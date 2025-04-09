@@ -115,6 +115,8 @@ function moveBall() {
         difficultyIncreased5 = false;
         ballSpeed = 5;
         paddleSpeed = 1.5 * ballSpeed;
+        ball.style.opacity = "1";
+        paddle.style.opacity = "1";
         ball.style.transition = "background-color 1.5s ease";
         ball.style.backgroundColor = "blue";
         score.style.transition = "color 1.5s ease";
@@ -193,6 +195,8 @@ function dif2() {
 function dif3() {
     ballSpeed = ballSpeed * 1.5;
     paddleSpeed = paddleSpeed * 1.5;
+
+    paddle.style.opacity = "0.3";
 
     ball.style.transition = "background-color 1.5s ease";
     ball.style.backgroundColor = "orange";

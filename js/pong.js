@@ -47,7 +47,20 @@ function createPaddle(){
     paddle.style.left = `${paddleXPosition}px`
 }
 
-
+function createScore() {
+    const score = document.createElement('div');
+    score.id = 'score';
+    score.innerHTML = '0';
+    document.body.appendChild(score);
+    score.style.position = 'absolute';
+    score.style.top = '50%';
+    score.style.left = '50%';
+    score.style.transform = 'translateX(-50%)';
+    score.style.fontSize = '30px';
+    score.style.color = 'black';
+    score.style.zIndex = '-1';
+}
+createScore();
 
 function moveBall(){
     ballXPosition = ballXPosition + ballSpeed * ballXDirection

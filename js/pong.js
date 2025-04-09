@@ -152,6 +152,8 @@ function dif1() {
     score.style.color = "lightgreen";
 }
 
+
+
 function changeDif() {
     if (parseInt(score.innerHTML) == 5 && !difficultyIncreased) {
         dif1();

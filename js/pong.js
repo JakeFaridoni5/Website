@@ -226,9 +226,7 @@ function dif5() {
     ball.style.backgroundColor = "black";
 
     score.style.transition = "color 1.5s ease";
-    score.style.transition = "border 1.5s ease";
-    score.style.color = "Black";
-    score.style.border = "2px solid white";
+    score.style.color = "black";
     score.style.zIndex = "1";
 }
 

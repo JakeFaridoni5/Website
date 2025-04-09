@@ -123,6 +123,10 @@ function moveBall() {
 
 function increaseScore() {
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
+    textShake();
+}
+
+function textShake() {
     score.style.animation = "shake 0.5s";
     score.style.animationIterationCount = "1";
 

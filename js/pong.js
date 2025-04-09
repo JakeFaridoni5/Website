@@ -104,6 +104,10 @@ function moveBall() {
         increaseScore();
     }
     if (ballYPosition < 0) {
+        textAni2();
+        score.addEventListener('animationend', () => {
+            score.style.animation = '';
+        });
         difficultyIncreased = false;
         ballSpeed = 5;
         paddleSpeed = 5;
@@ -129,7 +133,7 @@ function increaseScore() {
     });
 }
 
-function textAni() {
+function textAni1() {
     const style = document.createElement('style');
     style.innerHTML = `
     @keyframes textGrow {
@@ -139,6 +143,22 @@ function textAni() {
     }`;
     document.head.appendChild(style);
     score.style.animation = "textGrow 0.5s";
+    score.style.zIndex = "1";
+}
+
+function textAni2() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+    @keyframes textShake {
+        0% { transform: rotate(0); }
+        25% { transform: rotate(-25deg); }
+        50% { transform: rotate(25deg); }
+        75% { transform: rotate(-25deg); }
+        100% { transform: rotate(0); }
+
+    }`;
+    document.head.appendChild(style);
+    score.style.animation = "textShake 1s";
 }
 
 function movePaddleRight() {

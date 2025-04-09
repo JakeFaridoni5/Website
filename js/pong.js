@@ -213,10 +213,8 @@ function dif4() {
 }
 
 function dif5() {
-    // ballSpeed = ballSpeed * 1.5;
-    // paddleSpeed = paddleSpeed * 1.5;
-    ballSpeed = 37.96875;
-    paddleSpeed = 1.5 * ballSpeed;
+    ballSpeed = ballSpeed * 1.5;
+    paddleSpeed = paddleSpeed * 1.5;
 
     ball.style.opacity = "0.2";
     ball.style.transition = "background-color 1.5s ease";

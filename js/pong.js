@@ -142,6 +142,8 @@ function dif1() {
     score.style.color = "lightgreen";
 }
 
+
+
 document.addEventListener('keydown', (event) => {
     if (event.key == 'ArrowRight') {
         paddleDirection = 1

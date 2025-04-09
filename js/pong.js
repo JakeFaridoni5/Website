@@ -129,6 +129,8 @@ function movePaddleLeft() {
     }
 }
 
+
+
 document.addEventListener('keydown', (event) => {
     if (event.key == 'ArrowRight') {
         paddleDirection = 1

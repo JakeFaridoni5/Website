@@ -24,9 +24,7 @@ createPaddle()
 createScore()
 styleGame()
 
-if (parseInt(score.innerHTML) >= 10) {
-    dif1();
-}
+
 
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
@@ -134,8 +132,8 @@ function movePaddleLeft() {
 }
 
 function dif1() {
-    ballSpeed =  ballSpeed * 1.5;
-    paddleSpeed = paddleSpeed * 1.5;
+    ballSpeed =  ballSpeed * 2;
+    paddleSpeed = paddleSpeed * 2;
 
     ball.style.transition = "background-color 0.5s ease";
     ball.style.backgroundColor = "lightgreen";

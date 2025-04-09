@@ -144,7 +144,7 @@ function dif1() {
 }
 
 function changeDif() {
-    if (parseInt(score.innerHTML) === 5) {
+    if (parseInt(score.innerHTML) == 5) {
         dif1();
     }
 }

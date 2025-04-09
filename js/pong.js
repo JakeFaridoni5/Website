@@ -123,6 +123,19 @@ function moveBall() {
 
 function increaseScore() {
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
+    score.style.animation = "shake 0.5s";
+    score.style.animationIterationCount = "1";
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+    @keyframes shake {
+        0% { transform: rotate(0); }
+        25% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0); }
+    }`;
+    document.head.appendChild(style);
 }
 
 function movePaddleRight() {

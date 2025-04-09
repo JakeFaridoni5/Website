@@ -124,6 +124,9 @@ function moveBall() {
 function increaseScore() {
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
     textShake();
+    score.addEventListener('animationend', () => {
+        score.style.animation = '';
+    });
 }
 
 function textShake() {

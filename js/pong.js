@@ -22,13 +22,17 @@ let paddleDirection = 0
 createBall()
 createPaddle()
 createScore()
+styleGame()
 
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
 
 function styleGame() {
-    
+    document.body.style.backgroundColor = "black";
+    ball.style.border = "2px solid white";
+    paddle.style.borderRadius = "5px";
+    score.style.color = "white";
 }
 
 function createBall() {
@@ -44,6 +48,7 @@ function createBall() {
 
 function createPaddle() {
     document.body.appendChild(paddle)
+    paddle.style.backgroundColor = "White"
     paddle.style.height = `${paddleHeight}px`
     paddle.style.width = `${paddleWidth}px`
     paddle.style.backgroundColor = "Black"

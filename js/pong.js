@@ -232,7 +232,7 @@ function dif5() {
 
 function changeDif() {
     if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
-        dif5();
+        dif1();
         difficultyIncreased = true;
     }
     if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {

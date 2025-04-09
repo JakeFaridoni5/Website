@@ -109,8 +109,12 @@ function moveBall() {
             score.style.animation = '';
         });
         difficultyIncreased = false;
+        difficultyIncreased2 = false;
+        difficultyIncreased3 = false;
+        difficultyIncreased4 = false;
+        difficultyIncreased5 = false;
         ballSpeed = 5;
-        paddleSpeed = 5;
+        paddleSpeed = 1.5 * ballSpeed;
         ball.style.transition = "background-color 1.5s ease";
         ball.style.backgroundColor = "blue";
         score.style.transition = "color 1.5s ease";

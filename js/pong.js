@@ -91,6 +91,15 @@ function moveBall(){
         ballYDirection = ballYDirection * -1;
         increaseScore();
     }
+    if (ballTop >= windowHeight) {
+        ballYDirection = ballYDirection * -1;
+        ballXPosition = windowWidth/2 - ballRadius
+        ballYPosition = windowHeight/2 - ballRadius
+        ball.style.left = `${ballXPosition}px`
+        ball.style.top = `${ballYPosition}px`
+        alert("Game Over")
+        const score = document.getElementById('score');
+        score.innerHTML = '0';
 }
 
 function increaseScore() {

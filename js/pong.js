@@ -123,26 +123,22 @@ function moveBall() {
 
 function increaseScore() {
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
-    textShake();
+    textAni();
     score.addEventListener('animationend', () => {
         score.style.animation = '';
     });
 }
 
-function textShake() {
-    score.style.animation = "shake 0.5s";
-    score.style.animationIterationCount = "1";
-
+function textAni() {
     const style = document.createElement('style');
     style.innerHTML = `
-    @keyframes shake {
-        0% { transform: rotate(0); }
-        25% { transform: rotate(-5deg); }
-        50% { transform: rotate(5deg); }
-        75% { transform: rotate(-5deg); }
-        100% { transform: rotate(0); }
+    @keyframes textGrow {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
     }`;
     document.head.appendChild(style);
+    score.style.animation = "textGrow 0.5s";
 }
 
 function movePaddleRight() {

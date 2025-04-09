@@ -104,7 +104,7 @@ function moveBall() {
         increaseScore();
     }
     if (ballYPosition < 0) {
-        textAni2();
+        textAni();
         score.addEventListener('animationend', () => {
             score.style.animation = '';
         });
@@ -127,26 +127,9 @@ function moveBall() {
 
 function increaseScore() {
     score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
-    textAni();
-    score.addEventListener('animationend', () => {
-        score.style.animation = '';
-    });
 }
 
-function textAni1() {
-    const style = document.createElement('style');
-    style.innerHTML = `
-    @keyframes textGrow {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.5); }
-        100% { transform: scale(1); }
-    }`;
-    document.head.appendChild(style);
-    score.style.animation = "textGrow 0.5s";
-    score.style.zIndex = "1";
-}
-
-function textAni2() {
+function textAni() {
     const style = document.createElement('style');
     style.innerHTML = `
     @keyframes textShake {

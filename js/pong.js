@@ -123,6 +123,7 @@ function increaseScore() {
         }
     })
 
+    
     function movePaddleRight(){
         if (paddleDirection == 1 && paddleXPosition + paddleWidth <= windowWidth - 1)
         {

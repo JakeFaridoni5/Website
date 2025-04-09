@@ -25,6 +25,7 @@ setInterval(movePaddleLeft, 10)
 
 createBall()
 createPaddle()
+createScore();
 
 function createBall(){
     document.body.appendChild(ball)
@@ -60,7 +61,6 @@ function createScore() {
     score.style.color = 'black';
     score.style.zIndex = '-1';
 }
-createScore();
 
 function moveBall(){
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
@@ -91,6 +91,8 @@ function moveBall(){
         ballYDirection = ballYDirection * -1;
     }
 }
+
+
 
     document.addEventListener('keydown', (event) => {
         if (event.key == 'ArrowRight'){

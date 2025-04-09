@@ -141,6 +141,9 @@ function movePaddleLeft() {
 
 let difficultyIncreased = false;
 let difficultyIncreased2 = false;
+let difficultyIncreased3 = false;
+let difficultyIncreased4 = false;
+let difficultyIncreased5 = false;
 
 function dif1() {
     ballSpeed = ballSpeed * 1.5;
@@ -164,14 +167,68 @@ function dif2() {
     score.style.color = "yellow";
 }
 
+function dif3() {
+    ballSpeed = ballSpeed * 1.5;
+    paddleSpeed = paddleSpeed * 1.5;
+
+    ball.style.transition = "background-color 1.5s ease";
+    ball.style.backgroundColor = "orange";
+
+    score.style.transition = "color 1.5s ease";
+    score.style.color = "orange";
+}
+
+function dif4() {
+    ballSpeed = ballSpeed * 1.5;
+    paddleSpeed = paddleSpeed * 1.5;
+
+    ball.style.transition = "background-color 1.5s ease";
+    ball.style.backgroundColor = "red";
+
+    score.style.transition = "color 1.5s ease";
+    score.style.color = "red";
+}
+
+function dif5() {
+    ballSpeed = ballSpeed * 1.5;
+    paddleSpeed = paddleSpeed * 1.5;
+
+    ball.style.transition = "background-color 1.5s ease";
+    ball.style.backgroundColor = "black";
+
+    score.style.transition = "color 1.5s ease";
+    score.style.color = "purple";
+    score.style.zIndex = "1";
+}
+
 function changeDif() {
-    if (parseInt(score.innerHTML) == 5 && !difficultyIncreased) {
+    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
         dif1();
         difficultyIncreased = true;
     }
-    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased2) {
+    if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {
         dif2();
         difficultyIncreased2 = true;
+    }
+    if (parseInt(score.innerHTML) == 30 && !difficultyIncreased3) {
+        dif3();
+        difficultyIncreased3 = true;
+    }
+    if (parseInt(score.innerHTML) == 40 && !difficultyIncreased4) {
+        dif4();
+        difficultyIncreased4 = true;
+    }
+    if (parseInt(score.innerHTML) == 50 && !difficultyIncreased5) {
+        dif5();
+        difficultyIncreased5 = true;
+    }
+    if (parseInt(score.innerHTML) == 60) {
+        score.innerHTML = "You Win!";
+        ball.style.transition = "background-color 1.5s ease";
+        ball.style.backgroundColor = "green";
+        score.style.transition = "color 1.5s ease";
+        score.style.color = "green";
+        score.style.zIndex = "1";
     }
 }
 

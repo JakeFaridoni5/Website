@@ -213,9 +213,12 @@ function dif4() {
 }
 
 function dif5() {
-    ballSpeed = ballSpeed * 1.5;
-    paddleSpeed = paddleSpeed * 1.5;
+    // ballSpeed = ballSpeed * 1.5;
+    // paddleSpeed = paddleSpeed * 1.5;
+    ballSpeed = 5;
+    paddleSpeed = 1.5 * ballSpeed;
 
+    ball.style.opacity = "0.2";
     ball.style.transition = "background-color 1.5s ease";
     ball.style.backgroundColor = "black";
 
@@ -226,7 +229,7 @@ function dif5() {
 
 function changeDif() {
     if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
-        dif1();
+        dif5();
         difficultyIncreased = true;
     }
     if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {

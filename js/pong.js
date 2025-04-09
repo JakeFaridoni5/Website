@@ -29,6 +29,7 @@ styleGame()
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
+setInterval(changeDif, 100);
 
 function styleGame() {
     document.body.style.backgroundColor = "black";
@@ -142,7 +143,11 @@ function dif1() {
     score.style.color = "lightgreen";
 }
 
-
+function changeDif() {
+    if (parseInt(score.innerHTML) === 5) {
+        dif1();
+    }
+}
 
 document.addEventListener('keydown', (event) => {
     if (event.key == 'ArrowRight') {

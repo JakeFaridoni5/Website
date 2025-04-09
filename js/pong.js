@@ -196,7 +196,7 @@ function dif3() {
     ballSpeed = ballSpeed * 1.5;
     paddleSpeed = paddleSpeed * 1.5;
 
-    paddle.style.opacity = "0.3";
+    paddle.style.opacity = "0.1";
 
     ball.style.transition = "background-color 1.5s ease";
     ball.style.backgroundColor = "orange";
@@ -231,7 +231,7 @@ function dif5() {
 
 function changeDif() {
     if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
-        dif5();
+        dif1();
         difficultyIncreased = true;
     }
     if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {

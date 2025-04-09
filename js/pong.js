@@ -19,14 +19,13 @@ let paddleYPosition = 55
 let paddleSpeed = 1.5 * ballSpeed
 let paddleDirection = 0
 
+createBall()
+createPaddle()
+createScore()
 
 setInterval(moveBall, 10)
 setInterval(movePaddleRight, 10)
 setInterval(movePaddleLeft, 10)
-
-createBall()
-createPaddle()
-createScore();
 
 function createBall(){
     document.body.appendChild(ball)
@@ -61,32 +60,32 @@ function createScore() {
     score.style.zIndex = '-1';
 }
 
-function moveBall(){
-    ballXPosition = ballXPosition + ballSpeed * ballXDirection
-    ball.style.left = `${ballXPosition}px`
-    if (ballXPosition < 0 || ballXPosition > (windowWidth - 2 * ballRadius)){
-        ballXDirection = ballXDirection * -1
-    }
-    ballYPosition = ballYPosition + ballSpeed * ballYDirection
-    ball.style.top = `${ballYPosition}px`
-    if (ballYPosition < 0 || ballYPosition > (windowHeight - 2 * ballRadius)){
-        ballYDirection = ballYDirection * -1
-    }
-    let ballTop = ballYPosition;
-    let ballBottom = ballYPosition + 2 * ballRadius;
-    let ballLeft = ballXPosition;
-    let ballRight = ballXPosition + 2 * ballRadius;
-    let paddleTop = paddleYPosition;
-    let paddleBottom = paddleYPosition + paddleHeight;
-    let paddleLeft = paddleXPosition;
-    let paddleRight = paddleXPosition + paddleWidth;
-    if (
-        ballBottom >= paddleTop &&
-        ballTop <= paddleBottom &&
-        ballLeft <= paddleRight &&
-        ballRight >= paddleLeft &&
-        ballYDirection === -1
-    ) {
+    function moveBall(){
+        ballXPosition = ballXPosition + ballSpeed * ballXDirection
+        ball.style.left = `${ballXPosition}px`
+        if (ballXPosition < 0 || ballXPosition > (windowWidth - 2 * ballRadius)){
+            ballXDirection = ballXDirection * -1
+        }
+        ballYPosition = ballYPosition + ballSpeed * ballYDirection
+        ball.style.top = `${ballYPosition}px`
+        if (ballYPosition < 0 || ballYPosition > (windowHeight - 2 * ballRadius)){
+            ballYDirection = ballYDirection * -1
+        }
+        let ballTop = ballYPosition;
+        let ballBottom = ballYPosition + 2 * ballRadius;
+        let ballLeft = ballXPosition;
+        let ballRight = ballXPosition + 2 * ballRadius;
+        let paddleTop = paddleYPosition;
+        let paddleBottom = paddleYPosition + paddleHeight;
+        let paddleLeft = paddleXPosition;
+        let paddleRight = paddleXPosition + paddleWidth;
+        if (
+            ballBottom >= paddleTop &&
+            ballTop <= paddleBottom &&
+            ballLeft <= paddleRight &&
+            ballRight >= paddleLeft &&
+            ballYDirection === -1
+        ) {
         ballYDirection = ballYDirection * -1;
         increaseScore();
     }
@@ -101,9 +100,25 @@ function moveBall(){
     }
 }
 
-function increaseScore() {
-    score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
-}
+    function increaseScore() {
+        score.innerHTML = `${parseInt(score.innerHTML) + 1}`;
+    }
+
+    function movePaddleRight(){
+        if (paddleDirection == 1 && paddleXPosition + paddleWidth <= windowWidth - 1)
+        {
+            paddleXPosition = paddleXPosition + paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
+    }
+
+    function movePaddleLeft(){
+        if (paddleDirection == -1 && paddleXPosition >= 0)
+        {
+            paddleXPosition = paddleXPosition - paddleSpeed
+            paddle.style.left = `${paddleXPosition}px`
+        }
+    }
 
     document.addEventListener('keydown', (event) => {
         if (event.key == 'ArrowRight'){
@@ -122,20 +137,3 @@ function increaseScore() {
             paddleDirection = 0
         }
     })
-
-    
-    function movePaddleRight(){
-        if (paddleDirection == 1 && paddleXPosition + paddleWidth <= windowWidth - 1)
-        {
-            paddleXPosition = paddleXPosition + paddleSpeed
-            paddle.style.left = `${paddleXPosition}px`
-        }
-    }
-
-    function movePaddleLeft(){
-        if (paddleDirection == -1 && paddleXPosition >= 0)
-        {
-            paddleXPosition = paddleXPosition - paddleSpeed
-            paddle.style.left = `${paddleXPosition}px`
-        }
-    }

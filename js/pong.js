@@ -226,20 +226,22 @@ function dif5() {
     ball.style.backgroundColor = "black";
 
     score.style.transition = "color 1.5s ease";
-    score.style.color = "purple";
+    score.style.transition = "border 1.5s ease";
+    score.style.color = "Black";
+    score.style.border = "2px solid white";
     score.style.zIndex = "1";
 }
 
 function changeDif() {
-    if (parseInt(score.innerHTML) == 5 && !difficultyIncreased) {
-        dif1();
+    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased) {
+        dif5();
         difficultyIncreased = true;
     }
-    if (parseInt(score.innerHTML) == 10 && !difficultyIncreased2) {
+    if (parseInt(score.innerHTML) == 20 && !difficultyIncreased2) {
         dif2();
         difficultyIncreased2 = true;
     }
-    if (parseInt(score.innerHTML) == 20 && !difficultyIncreased3) {
+    if (parseInt(score.innerHTML) == 30 && !difficultyIncreased3) {
         dif3();
         difficultyIncreased3 = true;
     }

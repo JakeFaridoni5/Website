@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #228B22;
+}
+.tree {
+    position: absolute;
+    bottom: 70px;
+    display: inline-block;
+    margin: 0 20px;
+}
+.tree .trunk {
+    width: 20px;
+    height: 60px;
+    background-color: #8B4513;
+    margin: 0 auto;
+}
+.tree .leaves {
+    width: 60px;
+    height: 60px;
+    background-color: #006400;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+
+#tree1 {
+    left: 50px;
+}
+
+#tree2 {
+    left: 150px;
+}
+
+#tree3 {
+    left: 250px;
+}
+
+#tree4 {
+    left: 350px;
+}
+
+#tree5 {
+    left: 450px;
+}
+
+#tree6 {
+    left: 550px;
+}
+
+#tree7 {
+    left: 650px;
+}
+
+#tree8 {
+    left: 750px;
+}
+
+#tree9 {
+    left: 850px;
+}
+
+#tree10 {
+    left: 950px;
+}
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#cloud1 {
+    width: 120px;
+    height: 70px;
+    top: 50px;
+    left: 100px;
+}
+
+#cloud2 {
+    width: 150px;
+    height: 90px;
+    top: 100px;
+    left: 300px;
+}
+
+#cloud3 {
+    width: 100px;
+    height: 60px;
+    top: 30px;
+    left: 500px;
+}
